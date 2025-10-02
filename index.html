@@ -5,26 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Lobo - Desenvolvedor</title>
     <link rel="stylesheet" href="style.css">
-</head>
+
+    </head>
 <body>
 
     <header>
         <nav class="navbar">
-    
-            <ul class="nav-links">
+            <video autoplay muted loop class="navbar-video">
+                <source src="videos/intro.mp4" type="video/mp4">
+                <source src="videos/seu-video-loop.webm" type="video/webm">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#intro">Início</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#experiencia">Experiência</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </nav>
     </header>
 
     <main>
         <section id="intro" class="intro-section">
             <div class="intro-content">
-                <img src="imgs/perfil.jpg" alt="Sua Foto de Perfi" class="profile-pic">
+                <img src="imgs/perfil.jpg" alt="Sua Foto de Perfil" class="profile-pic">
                 <div class="intro-text">
                     <h1>Olá, eu sou Lucas Lobo</h1>
                     <p>
@@ -38,16 +50,21 @@
             <h2>Minhas Habilidades</h2>
             <div class="skills-container">
                 <div class="skill-card">
+                    <div class="skill-icons">
+                        <img src="imgs/HTML.png" alt="HTML5">
+                        <img src="imgs/CSS.png" alt="CSS3">
+                        <img src="imgs/JavaScript-Logo.png" alt="JavaScript">
+                    </div>
                     <h3>Frontend</h3>
-                    <p>HTML5, CSS3, JavaScript (ES6+), React, Vue.js</p>
+                    <p>HTML5, CSS3, JavaScript (ES6+), React</p>
                 </div>
                 <div class="skill-card">
                     <h3>Backend</h3>
-                    <p>Node.js, Python (Flask/Django), SQL, NoSQL</p>
+                    <p>Python (Flask/Django), SQL</p>
                 </div>
                 <div class="skill-card">
                     <h3>Ferramentas</h3>
-                    <p>Git, Docker, Webpack, Figma</p>
+                    <p>Git, Figma, VS Code</p>
                 </div>
             </div>
         </section>
@@ -56,29 +73,27 @@
             <h2>Projetos Anteriores</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Imagem do Projeto 1">
-                    <h3>Nome do Projeto 1</h3>
-                    <p>Uma breve descrição do projeto, as tecnologias utilizadas e o objetivo principal.</p>
+                    <img src="imgs/Gen.png" alt="Gerenciador de tarefas">
+                    <h3>Gerenciador de tarefas</h3>
+                    <p>Projeto para gerenciador de tarefas, este é um projeto completo onde estou criando todas as funcionalidades do app no front end e no lado do backend</p>
                     <div class="project-links">
-                        <a href="#" target="_blank">Ver Código</a>
+                        <a href="https://github.com/DevSamuelJ/TodoList" target="_blank">Ver Código</a>
                         <a href="#" target="_blank">Ver Online</a>
                     </div>
                 </div>
-
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Imagem do Projeto 2">
-                    <h3>Nome do Projeto 2</h3>
-                    <p>Uma breve descrição do projeto, as tecnologias utilizadas e o objetivo principal.</p>
+                    <img src="imgs/Gen.png" alt="Gerenciador de Estoque">
+                    <h3>Gerenciador de estoque</h3>
+                    <p>Este projeto tem como objetivo criar um sistema completo de gerenciamento de estoque de um negócio de pequeno porte</p>
                     <div class="project-links">
-                        <a href="#" target="_blank">Ver Código</a>
+                        <a href="https://github.com/DevSamuelJ/SmartStock" target="_blank">Ver Código</a>
                         <a href="#" target="_blank">Ver Online</a>
                     </div>
                 </div>
-
-                 <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Imagem do Projeto 3">
-                    <h3>Nome do Projeto 3</h3>
-                    <p>Uma breve descrição do projeto, as tecnologias utilizadas e o objetivo principal.</p>
+                <div class="project-card">
+                    <img src="imgs/Gen.png" alt="Análise de Ações">
+                    <h3>Análise de Ações</h3>
+                    <p>Este projeto tem como objetivo trazer relatórios e gráficos detalhados do histórico de variação de preços das principais ações vigentes no mercado</p>
                     <div class="project-links">
                         <a href="#" target="_blank">Ver Código</a>
                         <a href="#" target="_blank">Ver Online</a>
@@ -127,6 +142,8 @@
     <footer>
         <p>&copy; 2025 [Seu Nome]. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js" defer></script>
 
 </body>
 </html>
