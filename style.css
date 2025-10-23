@@ -208,6 +208,7 @@ section {
     height: 200px;
     object-fit: cover;
     display: block;
+    object-position: top;
 }
 
 .project-card h3, .project-card p, .project-links {
@@ -268,24 +269,14 @@ section {
     color: var(--cor-destaque);
 }
 
-.contact-form input, .contact-form textarea {
+/* ---- NOVO BOTÃO WHATSAPP ---- */
+.whatsapp-button {
+    /* Reutilizando o estilo do seu botão de formulário */
+    display: block;
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto);
-    font-family: var(--fonte-principal);
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--cor-destaque);
-}
-
-.contact-form button {
-    width: 100%;
+    max-width: 400px; /* Limita a largura em telas grandes */
+    margin: 0 auto; /* Centraliza o botão */
+    
     padding: 12px;
     background-color: var(--cor-destaque);
     color: var(--cor-primaria);
@@ -295,11 +286,17 @@ section {
     font-weight: bold;
     font-size: 1em;
     transition: opacity 0.3s ease;
+    
+    /* Adições para a tag <a> */
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center; /* Centraliza o texto dentro do botão */
 }
 
-.contact-form button:hover {
+.whatsapp-button:hover {
     opacity: 0.85;
 }
+
+
 
 /* ---- RODAPÉ ---- */
 footer {
@@ -382,5 +379,52 @@ footer {
 @media (max-width: 480px) {
     .intro-text h1 {
         font-size: 1.8em;
+    }
+}
+
+/* ---- SEÇÃO CURRÍCULO (PDF) ---- */
+.curriculo-container {
+    width: 100%;
+    /* Define uma proporção de "A4" (altura é ~1.41 da largura) */
+    /* Usamos 'aspect-ratio' para manter a proporção correta */
+    aspect-ratio: 1 / 1.41; 
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o iframe fique dentro das bordas */
+    margin-bottom: 30px;
+}
+
+.curriculo-iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove a borda padrão do iframe */
+}
+
+.download-button {
+    /* Reutilizando o estilo do seu botão de contato */
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.download-button:hover {
+    opacity: 0.85;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+    .curriculo-container {
+        /* Em telas pequenas, é melhor ter uma altura fixa 
+           do que um 'aspect-ratio' que fica muito alto */
+        aspect-ratio: auto;
+        height: 600px;
     }
 }
