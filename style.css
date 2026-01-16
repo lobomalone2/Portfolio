@@ -428,3 +428,11 @@ footer {
         height: 600px;
     }
 }
+
+.project-links span {
+    display: block;
+    font-size: 0.85em;
+    color: #ccc;
+    margin-bottom: 5px;
+    font-style: italic;
+}
